@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWSLambdaAuthenticatorClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75dd3780c6f94a4bf2930d6b6ca3cb0f61e9ebf0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWSLambdaAuthenticatorClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWSLambdaAuthenticatorClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

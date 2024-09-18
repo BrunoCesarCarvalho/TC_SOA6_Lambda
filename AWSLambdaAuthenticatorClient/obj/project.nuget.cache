@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4+PWjFwjnkA=",
+  "dgSpecHash": "UrCLw8uoBDP9EG7p8JSE+zQ684wqd02opb8FM16smYAi8KX7A6k/DpIuNBof8/cJLol1yulmCTHlDEDR7oDeyA==",
   "success": true,
   "projectFilePath": "C:\\_GTI_FIAP\\Tech-Challenge-Fiap-Lambda\\TC_SOA6_Lambda\\AWSLambdaAuthenticatorClient\\AWSLambdaAuthenticatorClient.csproj",
   "expectedPackageFiles": [
@@ -9,8 +9,6 @@
     "C:\\Users\\ricar\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.4.1\\amazon.lambda.serialization.systemtextjson.2.4.1.nupkg.sha512",
     "C:\\Users\\ricar\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\ricar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\ricar\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\8.0.8\\microsoft.netcore.app.runtime.linux-x64.8.0.8.nupkg.sha512",
-    "C:\\Users\\ricar\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.8\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.8.nupkg.sha512",
     "C:\\Users\\ricar\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\8.0.8\\microsoft.netcore.app.crossgen2.win-x64.8.0.8.nupkg.sha512"
   ],
   "logs": []
