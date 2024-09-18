@@ -3,7 +3,7 @@ name: Deploy .NET Core 8 Lambda
 on:
   push:
     branches:
-      - nome-da-sua-branch # Modifique para o nome da branch que você deseja monitorar
+      - main 
 
 jobs:
   build-and-deploy:
