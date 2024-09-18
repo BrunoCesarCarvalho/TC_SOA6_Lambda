@@ -40,11 +40,11 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: AKIAZAI4GT47NEL5C2IY
+          aws-secret-access-key: 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
           aws-region: us-east-1
 
       # Step 8: Fazer deploy do código para Lambda
       - name: Deploy to Lambda
         run: |
-          aws lambda update-function-code --function-name ${{ secrets.AWS_LAMBDA_ARN }} --zip-file fileb://function.zip
+          aws lambda update-function-code --function-name arn:aws:lambda:us-east-1:619071315774:function:AutheticatorClient --zip-file fileb://function.zip
