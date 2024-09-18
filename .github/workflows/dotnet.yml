@@ -22,15 +22,15 @@ jobs:
 
       # Step 3: Restaurar dependências
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore src/AWSLambdaAuthenticatorClient/AWSLambdaAuthenticatorClient.csproj # Caminho do .csproj
 
       # Step 4: Build o projeto em Release
       - name: Build
-        run: dotnet build --configuration Release
+        run: dotnet build src/AWSLambdaAuthenticatorClient/AWSLambdaAuthenticatorClient.csproj --configuration Release # Caminho do .csproj
 
       # Step 5: Publicar o projeto para Lambda (gera uma pasta com o executável e dependências)
       - name: Publish project
-        run: dotnet publish --configuration Release --output ./publish
+        run: dotnet publish src/AWSLambdaAuthenticatorClient/AWSLambdaAuthenticatorClient.csproj --configuration Release --output ./publish
 
       # Step 6: Compactar o conteúdo da pasta de publicação
       - name: Zip publish folder
