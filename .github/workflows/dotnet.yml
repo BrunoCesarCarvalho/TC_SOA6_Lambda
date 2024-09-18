@@ -1,0 +1,50 @@
+name: Deploy .NET Core 8 Lambda
+
+on:
+  push:
+    branches:
+      - nome-da-sua-branch # Modifique para o nome da branch que você deseja monitorar
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout do código
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Instalar o .NET Core 8 SDK
+      - name: Setup .NET Core 8
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+
+      # Step 3: Restaurar dependências
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Step 4: Build o projeto em Release
+      - name: Build
+        run: dotnet build --configuration Release
+
+      # Step 5: Publicar o projeto para Lambda (gera uma pasta com o executável e dependências)
+      - name: Publish project
+        run: dotnet publish --configuration Release --output ./publish
+
+      # Step 6: Compactar o conteúdo da pasta de publicação
+      - name: Zip publish folder
+        run: zip -r function.zip ./publish/*
+
+      # Step 7: Configurar credenciais AWS
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      # Step 8: Fazer deploy do código para Lambda
+      - name: Deploy to Lambda
+        run: |
+          aws lambda update-function-code --function-name ${{ secrets.AWS_LAMBDA_ARN }} --zip-file fileb://function.zip
