@@ -33,7 +33,7 @@ public class Function
         var clientDTO = new
         {
             Cpf = "99999999999",
-            DataNascimento = "28/06/1987",
+            DataNascimento = "28/06/1988",
             Email = "ricardosn87@hotmail.com",
             Id = 19,
             Nome = "Ricardo Nogueira",
@@ -106,18 +106,18 @@ public class Function
 
     public static bool ValidarCPF(string cpf)
     {
-        // Remove caracteres especiais como pontos e traÁos
+        // Remove caracteres especiais como pontos e tra√ßos
         cpf = Regex.Replace(cpf, @"[^\d]", "");
 
-        // Verifica se o CPF tem 11 dÌgitos
+        // Verifica se o CPF tem 11 d√≠gitos
         if (cpf.Length != 11)
             return false;
 
-        // Verifica se todos os dÌgitos s„o iguais, o que seria um CPF inv·lido (ex: 111.111.111-11)
+        // Verifica se todos os d√≠gitos s√£o iguais, o que seria um CPF inv√°lido (ex: 111.111.111-11)
         if (cpf.Distinct().Count() == 1)
             return false;
 
-        // Calcula o primeiro dÌgito verificador
+        // Calcula o primeiro d√≠gito verificador
         int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
         int soma = 0;
         for (int i = 0; i < 9; i++)
@@ -127,7 +127,7 @@ public class Function
         int resto = soma % 11;
         int digito1 = resto < 2 ? 0 : 11 - resto;
 
-        // Calcula o segundo dÌgito verificador
+        // Calcula o segundo d√≠gito verificador
         int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
         soma = 0;
         for (int i = 0; i < 10; i++)
@@ -137,7 +137,7 @@ public class Function
         resto = soma % 11;
         int digito2 = resto < 2 ? 0 : 11 - resto;
 
-        // Verifica se os dÌgitos calculados s„o iguais aos fornecidos no CPF
+        // Verifica se os d√≠gitos calculados s√£o iguais aos fornecidos no CPF
         return cpf.EndsWith($"{digito1}{digito2}");
     }
 }
