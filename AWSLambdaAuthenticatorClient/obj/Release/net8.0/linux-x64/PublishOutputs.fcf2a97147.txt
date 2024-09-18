@@ -1,0 +1,9 @@
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\AWSLambdaAuthenticatorClient.deps.json
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\AWSLambdaAuthenticatorClient.runtimeconfig.json
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\AWSLambdaAuthenticatorClient.pdb
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\Amazon.Lambda.APIGatewayEvents.dll
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\Amazon.Lambda.Core.dll
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\Microsoft.Extensions.DependencyInjection.dll
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\_GTI_FIAP\Tech-Challenge-Fiap-Lambda\TC_SOA6_Lambda\AWSLambdaAuthenticatorClient\bin\Release\net8.0\publish\AWSLambdaAuthenticatorClient.dll

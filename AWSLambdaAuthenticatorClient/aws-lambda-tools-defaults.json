@@ -1,0 +1,27 @@
+
+{
+    "Information" : [
+        "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+        "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+        "dotnet lambda help",
+        "All the command line options for the Lambda command can be specified in this file."
+    ],
+    "profile"     : "UserFiap",
+    "region"      : "us-east-1",
+    "configuration" : "Release",
+    "function-architecture" : "x86_64",
+    "function-runtime"      : "dotnet8",
+    "function-memory-size"  : 128,
+    "function-timeout"      : 30,
+    "function-handler"      : "AWSLambdaAuthenticatorClient::AWSLambdaAuthenticatorClient.Function::FunctionHandler",
+    "framework"             : "net8.0",
+    "function-name"         : "AutheticatorClient",
+    "package-type"          : "Zip",
+    "function-role"         : "arn:aws:iam::619071315774:role/lambda_exec_AutheticatorClient",
+    "function-subnets"      : "subnet-0ef356f873303560b",
+    "function-security-groups" : "sg-0f0a95dd05afbec88",
+    "tracing-mode"             : "PassThrough",
+    "environment-variables"    : "",
+    "image-tag"                : "",
+    "function-description"     : ""
+}
