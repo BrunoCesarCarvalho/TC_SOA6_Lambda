@@ -48,3 +48,4 @@ jobs:
       - name: Deploy to Lambda
         run: |
           aws lambda update-function-code --function-name arn:aws:lambda:us-east-1:619071315774:function:AutheticatorClient --zip-file fileb://function.zip
+          aws lambda update-function-configuration --function-name arn:aws:lambda:us-east-1:619071315774:function:AutheticatorClient --role arn:aws:iam::619071315774:role/LabRole
