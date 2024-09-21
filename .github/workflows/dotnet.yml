@@ -3,7 +3,7 @@ name: Deploy .NET Core 8 Lambda
 on:
   push:
     branches:
-      - main 
+        main
 permissions:
   id-token: write
   contents: read
