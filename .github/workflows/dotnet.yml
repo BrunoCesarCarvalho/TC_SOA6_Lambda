@@ -3,7 +3,7 @@ name: Deploy .NET Core 8 Lambda
 on:
   push:
     branches:
-      - nome-da-sua-branch # Modifique para o nome da branch que você deseja monitorar
+        main
 permissions:
   id-token: write
   contents: read
@@ -25,15 +25,15 @@ jobs:
 
       # Step 3: Restaurar dependências
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore AWSLambdaAuthenticatorClient/AWSLambdaAuthenticatorClient.csproj # Caminho do .csproj
 
       # Step 4: Build o projeto em Release
       - name: Build
-        run: dotnet build --configuration Release
+        run: dotnet build AWSLambdaAuthenticatorClient/AWSLambdaAuthenticatorClient.csproj --configuration Release # Caminho do .csproj
 
       # Step 5: Publicar o projeto para Lambda (gera uma pasta com o executável e dependências)
       - name: Publish project
-        run: dotnet publish --configuration Release --output ./publish
+        run: dotnet publish AWSLambdaAuthenticatorClient/AWSLambdaAuthenticatorClient.csproj --configuration Release --output ./publish /p:PublishReadyToRun=false
 
       # Step 6: Compactar o conteúdo da pasta de publicação
       - name: Zip publish folder
@@ -41,13 +41,14 @@ jobs:
 
       # Step 7: Configurar credenciais AWS
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: AKIAZAI4GT47NEL5C2IY
-          aws-secret-access-key: 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
+          # aws-access-key-id: AKIAZAI4GT47NEL5C2IY
+          # aws-secret-access-key: 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
+          role-to-assume: arn:aws:iam::619071315774:role/LabRole
           aws-region: us-east-1
 
       # Step 8: Fazer deploy do código para Lambda
       - name: Deploy to Lambda
         run: |
-          aws lambda update-function-code --function-name arn:aws:lambda:us-east-1:619071315774:function:AutheticatorClient --zip-file fileb://function.zip
+          aws lambda update-function-code --function-name arn:aws:lambda:us-east-1:619071315774:function:AutheticatorClient --zip-file fileb://function.zip        
