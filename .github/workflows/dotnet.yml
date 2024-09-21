@@ -38,14 +38,14 @@ jobs:
 
       # Step 7: Configurar credenciais AWS
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: AKIAZAI4GT47NEL5C2IY
-          aws-secret-access-key: 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
+          # aws-access-key-id: AKIAZAI4GT47NEL5C2IY
+          # aws-secret-access-key: 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
+          role-to-assume: arn:aws:iam::619071315774:role/LabRole
           aws-region: us-east-1
 
       # Step 8: Fazer deploy do código para Lambda
       - name: Deploy to Lambda
         run: |
-          aws lambda update-function-code --function-name arn:aws:lambda:us-east-1:619071315774:function:AutheticatorClient --zip-file fileb://function.zip
-          aws lambda update-function-configuration --function-name arn:aws:lambda:us-east-1:619071315774:function:AutheticatorClient --role arn:aws:iam::619071315774:role/LabRole
+          aws lambda update-function-code --function-name arn:aws:lambda:us-east-1:619071315774:function:AutheticatorClient --zip-file fileb://function.zip        
