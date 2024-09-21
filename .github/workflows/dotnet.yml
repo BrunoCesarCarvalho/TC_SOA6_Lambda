@@ -41,11 +41,11 @@ jobs:
 
       # Step 7: Configurar credenciais AWS
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          # aws-access-key-id: AKIAZAI4GT47NEL5C2IY
-          # aws-secret-access-key: 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
-          role-to-assume: arn:aws:iam::619071315774:role/LabRole
+          aws-access-key-id: AKIAZAI4GT47NEL5C2IY
+          aws-secret-access-key: 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
+          #role-to-assume: arn:aws:iam::619071315774:role/LabRole
           aws-region: us-east-1
 
       # Step 8: Fazer deploy do código para Lambda
