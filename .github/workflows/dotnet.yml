@@ -43,9 +43,9 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          #aws-access-key-id: AKIAZAI4GT47NEL5C2IY
-          #aws-secret-access-key: 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
-          role-to-assume: arn:aws:iam::619071315774:role/lambda_exec_AutheticatorClient
+          aws-access-key-id: AKIAZAI4GT47I5BWX76I
+          aws-secret-access-key: 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
+          #role-to-assume: arn:aws:iam::619071315774:role/lambda_exec_AutheticatorClient
           aws-region: us-east-1
 
       # Step 8: Fazer deploy do código para Lambda
